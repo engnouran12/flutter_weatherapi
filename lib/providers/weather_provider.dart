@@ -11,4 +11,6 @@ class WeatherProvider extends ChangeNotifier {
   }
 
   WeatherModel? get weatherData => _weatherData;
+  
+
 }

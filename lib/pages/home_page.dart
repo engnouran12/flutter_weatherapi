@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   WeatherModel? weatherData;
+  // Provider.of<WeatherProvider>(context)=provide;
   @override
   Widget build(BuildContext context) {
     weatherData = Provider.of<WeatherProvider>(context).weatherData;
@@ -30,8 +31,8 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return SearchPage(
-                  updateUi: updateUi,
-                );
+                    //updateUi: updateUi,
+                    );
               }));
             },
             icon: Icon(Icons.search),
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         ],
         title: Text('Weather App'),
       ),
-      body: Provider.of<WeatherProvider>(context).weatherData == null
+      body: weatherData == null
           ? Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -64,8 +65,8 @@ class _HomePageState extends State<HomePage> {
                   gradient: LinearGradient(
                 colors: [
                   weatherData!.getThemeColor(),
-                  weatherData!.getThemeColor()[300]!,
-                  weatherData!.getThemeColor()[100]!,
+                  weatherData!.getThemeColor()[700]!,
+                  weatherData!.getThemeColor()[50]!,
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:weather_app/models/weather_model.dart';
 
-class WeatherService {
+class WeatherService {//get data from api
   String baseUrl = 'http://api.weatherapi.com/v1';
 
   String apiKey = '3677bed892474b30b7a122242220806';
@@ -16,6 +16,7 @@ class WeatherService {
     var data  = jsonDecode(response.body);
       throw Exception(data['error']['message']);
     }
+    
     Map<String, dynamic> data = jsonDecode(response.body);
 
     WeatherModel weather = WeatherModel.fromJson(data);

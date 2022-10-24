@@ -6,8 +6,8 @@ import 'package:weather_app/services/weather_service.dart';
 
 class SearchPage extends StatelessWidget {
   String? cityName;
-  SearchPage({this.updateUi});
-  VoidCallback? updateUi;
+  //SearchPage({this.updateUi});
+  //VoidCallback? updateUi;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
