@@ -14,7 +14,7 @@ class WeatherModel {
       required this.minTemp,
       required this.weatherStateName});
 
-  factory WeatherModel.fromJson(dynamic data) {
+  factory WeatherModel.from(dynamic data) {
     var jsonData = data['forecast']['forecastday'][0]['day'];
 
     return WeatherModel(
